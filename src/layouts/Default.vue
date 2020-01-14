@@ -12,15 +12,25 @@
         </template>
 
         <template slot="end">
-          <b-navbar-item href="#" class="is-size-7">Home</b-navbar-item>
-          <b-navbar-item href="#" class="is-size-7">Projects</b-navbar-item>
-          <b-navbar-item href="#" class="is-size-7">About</b-navbar-item>
-          <b-navbar-item href="#" class="is-size-7">Blog</b-navbar-item>
-          <b-navbar-item href="#" class="is-size-7">Contact Me</b-navbar-item>
+          <b-navbar-item>
+            <g-link to="/" class="link is-size-7">Home</g-link>
+          </b-navbar-item>
+          <b-navbar-item>
+            <g-link to="/portfolio/" class="link is-size-7">Portfolio</g-link>
+          </b-navbar-item>
+          <b-navbar-item>
+            <g-link href="#" class="link is-size-7">About</g-link>
+          </b-navbar-item>
+          <b-navbar-item>
+            <g-link href="#" class="link is-size-7">Blog</g-link>
+          </b-navbar-item>
+          <b-navbar-item>
+            <g-link href="#" class="link is-size-7">Contact Me</g-link>
+          </b-navbar-item>
         </template>
       </b-navbar>
     </header>
-    <div class="content-container has-padding-top-20 has-padding-bottom-30">
+    <div class="content-container has-margin-top-10">
       <slot />
     </div>
   </div>
@@ -48,13 +58,16 @@ body {
 .navbar {
   background: rgba(0, 25, 51, 0.5);
 }
-a.navbar-item,
-.navbar-link {
+.link {
   color: white;
   font-weight: 100;
 }
 
 .content-container {
   background: #022b57;
+}
+
+.is-round-image {
+  border-radius: 250px;
 }
 </style>

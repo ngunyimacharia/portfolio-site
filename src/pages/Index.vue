@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column"></div>
         <div class="column is-three-fifths has-text-centered">
-          <g-image src="~/assets/images/ppic.png" width="150" class="ppic has-margin-20" />
+          <g-image src="~/assets/images/ppic.png" width="200" class="is-round-image has-margin-20" />
           <h1 class="has-text-weight-bold is-capitalized is-size-5">KELVIN M NGUNYI</h1>
           <h3
             class="has-text-weight-semibold is-capitalized is-size-6 has-margin-20"
@@ -39,18 +39,13 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: "Hello, world!"
-  }
+  
 };
 </script>
 
 <style>
 .home-links a {
   margin-right: 1rem;
-}
-.ppic {
-  border-radius: 250px;
 }
 .connect-links {
   width: 50%;
