@@ -12,24 +12,7 @@
           <p
             class="has-text-weight-light is-capitalized is-size-6 has-margin-20"
           >Design, development, integration and maintenance of web-based systems using the latest available technologies.</p>
-
-          <div class="columns connect-links">
-            <div class="column">
-              <b-icon pack="fab" icon="twitter-square" size="is-medium" class="twitter"></b-icon>
-            </div>
-            <div class="column">
-              <b-icon pack="fab" icon="medium" size="is-medium" class="medium"></b-icon>
-            </div>
-            <div class="column">
-              <b-icon pack="fab" icon="gitlab" size="is-medium" class="gitlab"></b-icon>
-            </div>
-            <div class="column">
-              <b-icon pack="fab" icon="github-square" size="is-medium" class="github"></b-icon>
-            </div>
-            <div class="column">
-              <b-icon pack="fab" icon="linkedin" size="is-medium" class="linkedin"></b-icon>
-            </div>
-          </div>
+          <Platforms />
         </div>
         <div class="column"></div>
       </div>
@@ -38,34 +21,22 @@
 </template>
 
 <script>
-export default {
-  
-};
+export default {};
 </script>
 
 <style>
 .home-links a {
   margin-right: 1rem;
 }
-.connect-links {
-  width: 50%;
-  min-width: 400px;
-  margin: 0 auto;
-}
-
-.twitter {
-  color: #55acee;
-}
-.medium {
-  color: #000000;
-}
-.gitlab {
-  color: #fc6d27;
-}
-.github {
-  color: #000000;
-}
-.linkedin {
-  color: #2867b2;
-}
 </style>
+
+<script>
+// Components
+import Platforms from "~/components/Platforms";
+
+export default {
+  components: {
+    Platforms
+  }
+};
+</script>
