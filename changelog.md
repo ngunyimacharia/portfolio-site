@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Homepage structure complete
 - Portfolio structure complete
+- Markdown plugins
+- Platforms content
 
 ## [0.0.0] - 2019-01-14
 
