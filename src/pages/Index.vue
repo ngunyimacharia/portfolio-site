@@ -1,33 +1,76 @@
 <template>
   <Layout>
+    <div class="container">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-three-fifths has-text-centered">
+          <g-image src="~/assets/images/ppic.png" width="150" class="ppic has-margin-20" />
+          <h1 class="has-text-weight-bold is-capitalized is-size-5">KELVIN M NGUNYI</h1>
+          <h3
+            class="has-text-weight-semibold is-capitalized is-size-6 has-margin-20"
+          >Full-time Software Engineer and aspiring tech rockstar!</h3>
+          <p
+            class="has-text-weight-light is-capitalized is-size-6 has-margin-20"
+          >Design, development, integration and maintenance of web-based systems using the latest available technologies.</p>
 
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+          <div class="columns connect-links">
+            <div class="column">
+              <b-icon pack="fab" icon="twitter-square" size="is-medium" class="twitter"></b-icon>
+            </div>
+            <div class="column">
+              <b-icon pack="fab" icon="medium" size="is-medium" class="medium"></b-icon>
+            </div>
+            <div class="column">
+              <b-icon pack="fab" icon="gitlab" size="is-medium" class="gitlab"></b-icon>
+            </div>
+            <div class="column">
+              <b-icon pack="fab" icon="github-square" size="is-medium" class="github"></b-icon>
+            </div>
+            <div class="column">
+              <b-icon pack="fab" icon="linkedin" size="is-medium" class="linkedin"></b-icon>
+            </div>
+          </div>
+        </div>
+        <div class="column"></div>
+      </div>
+    </div>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Hello, world!"
   }
-}
+};
 </script>
 
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+.ppic {
+  border-radius: 250px;
+}
+.connect-links {
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.twitter {
+  color: #55acee;
+}
+.medium {
+  color: #000000;
+}
+.gitlab {
+  color: #fc6d27;
+}
+.github {
+  color: #000000;
+}
+.linkedin {
+  color: #2867b2;
 }
 </style>

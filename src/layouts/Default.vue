@@ -1,15 +1,28 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
+      <b-navbar class="navbar" :transparent="true">
+        <template slot="brand">
+          <b-navbar-item tag="router-link" :to="{ path: '/' }">
+            <span class="logo">K | N</span>
+          </b-navbar-item>
+        </template>
+        <template slot="start">
+          <!-- Nothing here  -->
+        </template>
+
+        <template slot="end">
+          <b-navbar-item href="#" class="is-size-7">Home</b-navbar-item>
+          <b-navbar-item href="#" class="is-size-7">Projects</b-navbar-item>
+          <b-navbar-item href="#" class="is-size-7">About</b-navbar-item>
+          <b-navbar-item href="#" class="is-size-7">Blog</b-navbar-item>
+          <b-navbar-item href="#" class="is-size-7">Contact Me</b-navbar-item>
+        </template>
+      </b-navbar>
     </header>
-    <slot/>
+    <div class="content-container has-padding-top-20 has-padding-bottom-30">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -23,28 +36,25 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+  background: #001934;
+  color: white;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.logo {
+  font-weight: 900;
+}
+.navbar {
+  background: rgba(0, 25, 51, 0.5);
+}
+a.navbar-item,
+.navbar-link {
+  color: white;
+  font-weight: 100;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
+.content-container {
+  background: #022b57;
 }
 </style>
