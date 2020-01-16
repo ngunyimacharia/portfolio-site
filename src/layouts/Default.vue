@@ -22,7 +22,7 @@
             <g-link to="/experience/" class="link is-size-7">Experience</g-link>
           </b-navbar-item>
           <b-navbar-item>
-            <g-link href="#" class="link is-size-7">Blog</g-link>
+            <g-link to="/education/" class="link is-size-7">Education</g-link>
           </b-navbar-item>
           <b-navbar-item>
             <g-link href="#" class="link is-size-7">Contact Me</g-link>

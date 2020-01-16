@@ -40,6 +40,14 @@ module.exports = {
                 baseDir: "./content/experience",
                 path: "./**/*.md",
             }
+        },
+        {
+            use: "@gridsome/source-filesystem",
+            options: {
+                typeName: "Education",
+                baseDir: "./content/education",
+                path: "./**/*.md",
+            }
         }
     ],
     templates: {
