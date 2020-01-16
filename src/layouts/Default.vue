@@ -19,7 +19,7 @@
             <g-link to="/portfolio/" class="link is-size-7">Portfolio</g-link>
           </b-navbar-item>
           <b-navbar-item>
-            <g-link href="#" class="link is-size-7">About</g-link>
+            <g-link to="/experience/" class="link is-size-7">Experience</g-link>
           </b-navbar-item>
           <b-navbar-item>
             <g-link href="#" class="link is-size-7">Blog</g-link>

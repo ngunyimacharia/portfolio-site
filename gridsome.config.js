@@ -32,6 +32,14 @@ module.exports = {
                     }
                 }
             }
+        },
+        {
+            use: "@gridsome/source-filesystem",
+            options: {
+                typeName: "Experience",
+                baseDir: "./content/experience",
+                path: "./**/*.md",
+            }
         }
     ],
     templates: {
