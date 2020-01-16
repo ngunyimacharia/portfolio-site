@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Portfolio structure complete
 - Markdown plugins
 - Platforms content and component
+- Portfolio configuration, content and functionality
 
 ## [0.0.0] - 2019-01-14
 

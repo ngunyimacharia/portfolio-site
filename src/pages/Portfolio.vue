@@ -15,123 +15,43 @@
         </div>
       </div>
     </div>
-    <div class="portfolio-list">
+    <div class="portfolio-list" v-if="$page">
       <div class="container">
-        <div class="columns">
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img
-                        src="https://bulma.io/images/placeholders/96x96.png"
-                        alt="Placeholder image"
-                      />
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                  </div>
-                </div>
-
-                <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris.
-                  <a>@bulmaio</a>.
-                  <a href="#">#css</a>
-                  <a href="#">#responsive</a>
-                  <br />
-                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-              </div>
-            </div>
+        <b-field grouped group-multiline class="has-padding-top-20 has-padding-bottom-20">
+          <b-field label="Stack" labelPosition="inside" expanded>
+            <b-select placeholder="All technologies" expanded size="is-small" v-model="tool">
+              <option :value="null">All technologies</option>
+              <option
+                v-for="tool in $page.tools.edges"
+                :value="tool.node.id"
+                :key="tool.node.id"
+              >{{ tool.node.id }}</option>
+            </b-select>
+          </b-field>
+          <b-field label="Status" labelPosition="inside" expanded>
+            <b-select placeholder="All Statuses" expanded size="is-small" v-model="status">
+              <option :value="null">All Statuses</option>
+              <option
+                v-for="status in $page.statuses.edges"
+                :value="status.node.id"
+                :key="status.node.id"
+              >{{ status.node.id }}</option>
+            </b-select>
+          </b-field>
+        </b-field>
+        <div class="columns is-multiline" v-if="myPortfolio.length">
+          <div
+            class="column is-4"
+            v-for="portfolio in myPortfolio"
+            :key="portfolio.node.title"
+          >
+            <Portfolio :portfolio="portfolio.node" />
           </div>
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img
-                        src="https://bulma.io/images/placeholders/96x96.png"
-                        alt="Placeholder image"
-                      />
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                  </div>
-                </div>
-
-                <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris.
-                  <a>@bulmaio</a>.
-                  <a href="#">#css</a>
-                  <a href="#">#responsive</a>
-                  <br />
-                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img
-                        src="https://bulma.io/images/placeholders/96x96.png"
-                        alt="Placeholder image"
-                      />
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                  </div>
-                </div>
-
-                <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris.
-                  <a>@bulmaio</a>.
-                  <a href="#">#css</a>
-                  <a href="#">#responsive</a>
-                  <br />
-                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div v-else class="has-text-centered">
+          Ooops! No items in my portfolio match your filters!
+          <br/>
+          Let's build one together. Contact me :-)
         </div>
       </div>
     </div>
@@ -149,9 +69,107 @@
 </style>
 
 <script>
+// Components
+
+import Portfolio from "~/components/Portfolio";
+
 export default {
+  components: {
+    Portfolio
+  },
   metaInfo: {
     title: "My Portfolio"
+  },
+  data: function(){
+    return {
+      myPortfolio:[],
+      tool:null,
+      status:null,
+    }
+  },
+  watch:{
+    tool: function(tool){
+      this.filter();
+    },
+    status: function(status){
+      console.log(status)
+      this.filter();
+    },
+    $page: function (pageVal){
+      this.filter();
+    }
+  },
+  created(){
+    this.filter();
+  },
+  mounted(){
+    this.filter();
+  },
+  methods:{
+    filter(){
+      // Check if page data loaded
+      if(!this.$page){
+        setTimeout(this.filter(), 1000);
+        return;
+      }
+
+      // Filter
+      if(this.tool && this.status){
+        this.myPortfolio = this.$page.portfolio.edges.filter(portfolio => {
+          return portfolio.node.tools.find( tool => tool.id == this.tool) && portfolio.node.status.id == this.status
+        })
+
+      }else if(this.tool){
+        this.myPortfolio = this.$page.portfolio.edges.filter(portfolio => {
+          return portfolio.node.tools.find( tool => tool.id == this.tool)
+        })
+
+      }else if(this.status){
+        this.myPortfolio = this.$page.portfolio.edges.filter(portfolio => {
+          return portfolio.node.status.id == this.status
+        })
+      }else{
+        this.myPortfolio = this.$page.portfolio.edges
+      }
+    }
   }
 };
 </script>
+
+<page-query>
+query{
+  portfolio: allPortfolio(sortBy:"dateCreated"){
+    totalCount
+  	edges{
+      node{
+        id
+        title
+        url
+        image(width: 350, height: 235, quality: 90)
+        status{
+          id
+        }
+        content
+        dateCreated
+        tools{
+          id
+        }
+      }
+    }
+  }
+  tools: allTool(sortBy:"id",order:ASC){
+    edges{
+    	node{
+        id
+      }
+    }
+  }
+  statuses: allStatus(sortBy:"id",order:ASC){
+    edges{
+    	node{
+        id
+      }
+    }
+  }
+}
+</page-query>
