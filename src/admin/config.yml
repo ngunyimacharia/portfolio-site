@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: ngunyimacharia/ngunyimacharia
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "recommendations"
+    label: "Recommendations"
+    folder: "recommendations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["Movie", "TV Show", "Books"] }
+      - { label: "Excerpt", name: "excerpt", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -7,7 +7,19 @@
 module.exports = {
     siteName: "Kelvin M Ngunyi",
     siteDescription: "Full-time Software Engineer and aspiring tech rockstar!",
-    plugins: [{
+    transformers: {
+        remark: {
+            externalLinksTarget: "_blank",
+            externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+            anchorClassName: "icon icon-link",
+            plugins: [
+                // ...global plugins
+            ]
+        }
+    },
+    plugins: [
+        // Markdown
+        {
             use: "@gridsome/source-filesystem",
             options: {
                 typeName: "Platform",
@@ -38,7 +50,7 @@ module.exports = {
             options: {
                 typeName: "Experience",
                 baseDir: "./content/experience",
-                path: "./**/*.md",
+                path: "./**/*.md"
             }
         },
         {
@@ -46,7 +58,15 @@ module.exports = {
             options: {
                 typeName: "Education",
                 baseDir: "./content/education",
-                path: "./**/*.md",
+                path: "./**/*.md"
+            }
+        },
+
+        // Netflify CMS
+        {
+            use: `gridsome-plugin-netlify-cms`,
+            options: {
+                publicPath: `/admin`
             }
         }
     ],

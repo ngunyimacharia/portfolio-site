@@ -3,7 +3,7 @@
 
 // Plugins
 import Buefy from "buefy";
-import "buefy/dist/buefy.css";
+import "~/assets/scss/bulma_variables.scss";
 import "bulma-helpers/css/bulma-helpers.min.css";
 
 import Vue from 'vue'

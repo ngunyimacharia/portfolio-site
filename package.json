@@ -13,7 +13,9 @@
     "buefy": "^0.8.9",
     "bulma-helpers": "^0.3.8",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
     "moment": "^2.24.0",
+    "netlify-cms": "^2.10.8",
     "vue-axios": "^2.1.5",
     "vue-cute-timeline": "^1.2.8"
   },
