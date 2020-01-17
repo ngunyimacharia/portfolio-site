@@ -34,8 +34,8 @@
               <b-icon pack="fas" icon="plug" size="is-small" class="has-text-danger" />
               {{portfolio.status.id}}
             </p>
-            <p class="is-pulled-right has-margin-top-10 has-text-grey is-size-7">
-              <b-icon pack="fas" icon="calendar" size="is-small" class="has-text-grey" />
+            <p class="is-pulled-right has-margin-top-10 has-text-info is-size-7">
+              <b-icon pack="fas" icon="calendar" size="is-small" class="has-text-info" />
               {{portfolio.dateCreated}}
             </p>
           </div>
@@ -44,7 +44,7 @@
 
       <div class="content is-small has-margin-1" v-html="portfolio.content" />
       <b-taglist>
-        <b-tag type="is-info" v-for="tool in portfolio.tools" :key="tool.id">{{tool.id}}</b-tag>
+        <b-tag v-for="tool in portfolio.tools" :key="tool.id">{{tool.id}}</b-tag>
       </b-taglist>
     </div>
   </div>

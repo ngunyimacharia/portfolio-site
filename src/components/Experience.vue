@@ -24,8 +24,10 @@
         </p>
       </header>
       <div class="card-content">
-        <div class="content">
-          <p class="has-text-weight-bold">{{ dateStarted }} - {{dateStopped}}</p>
+        <div class="content is-small">
+          <p>
+            <span class="has-text-weight-bold has-text-info">{{ dateStarted }} - {{dateStopped}}</span>
+          </p>
           <p v-html="experience.content" />
         </div>
       </div>

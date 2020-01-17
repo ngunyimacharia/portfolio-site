@@ -11,13 +11,24 @@
       class="append has-background-light has-margin-10 has-padding-20 has-text-grey-darker is-size-7"
     >
     </div>-->
-    <div class="content has-padding-10 has-text-white">
-      <p>
-        {{education.title}}
-        -&nbsp;
-        {{education.institution}}
-      </p>
-      <p class="is-size-7">{{ education.dateCompleted }}</p>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title has-text-weight-bolder">{{education.title}}</p>
+      </header>
+      <div class="card-content">
+        <div class="content is-small">
+          <p>
+            Institution:
+            <span class="has-text-weight-bold">{{ education.institution }}</span>
+          </p>
+          <p>
+            Date Completed:
+            <span
+              class="has-text-weight-bold has-text-info"
+            >{{ education.dateCompleted }}</span>
+          </p>
+        </div>
+      </div>
     </div>
   </timeline-item>
 </template>

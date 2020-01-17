@@ -1,20 +1,11 @@
 <template>
   <Layout>
-    <div class="title-bar columns is-vcentered is-gapless has-padding-top-20">
-      <div class="column is-2 has-text-centered">
-        <g-image src="~/assets/images/portfolio.png" width="150px" class="is-round-image" />
-      </div>
-      <div class="column has-margin-left-20">
-        <div class="description has-padding-10 has-padding-left-30 has-padding-bottom-30">
-          <h1
-            class="has-text-weight-bold is-uppercase is-size-6 is-pulled-left has-margin-0"
-          >My Portfolio</h1>
-          <p
-            class="is-size-7 is-pulled-right is-italic"
-          >Feel free to contact me if you want us to work together towards something awesome</p>
-        </div>
-      </div>
-    </div>
+    <Hero
+      title="My Portfolio"
+      subtitle="Feel free to contact me if you want us to work together towards something awesome"
+    >
+      <g-image src="~/assets/images/portfolio.png" width="150px" class="is-round-image" />
+    </Hero>
     <div class="portfolio-list" v-if="$page">
       <div class="container">
         <b-field grouped group-multiline class="has-padding-top-20 has-padding-bottom-20">
@@ -40,96 +31,83 @@
           </b-field>
         </b-field>
         <div class="columns is-multiline" v-if="myPortfolio.length">
-          <div
-            class="column is-4"
-            v-for="portfolio in myPortfolio"
-            :key="portfolio.node.title"
-          >
+          <div class="column is-4" v-for="portfolio in myPortfolio" :key="portfolio.node.title">
             <Portfolio :portfolio="portfolio.node" />
           </div>
         </div>
         <div v-else class="has-text-centered">
           Ooops! No items in my portfolio match your filters!
-          <br/>
-          Let's build one together. Contact me :-)
+          <br />Let's build one together. Contact me :-)
         </div>
       </div>
     </div>
   </Layout>
 </template>
 
-<style>
-.title-bar .description {
-  background: #091a28;
-  border-radius: 100px 0 0 100px;
-}
-.portfolio-list {
-  background: #001934;
-}
-</style>
-
 <script>
 // Components
-
+import Hero from "~/components/Hero";
 import Portfolio from "~/components/Portfolio";
 
 export default {
   components: {
+    Hero,
     Portfolio
   },
   metaInfo: {
     title: "My Portfolio"
   },
-  data: function(){
+  data: function() {
     return {
-      myPortfolio:[],
-      tool:null,
-      status:null,
-    }
+      myPortfolio: [],
+      tool: null,
+      status: null
+    };
   },
-  watch:{
-    tool: function(tool){
+  watch: {
+    tool: function(tool) {
       this.filter();
     },
-    status: function(status){
-      console.log(status)
+    status: function(status) {
+      console.log(status);
       this.filter();
     },
-    $page: function (pageVal){
+    $page: function(pageVal) {
       this.filter();
     }
   },
-  created(){
+  created() {
     this.filter();
   },
-  mounted(){
+  mounted() {
     this.filter();
   },
-  methods:{
-    filter(){
+  methods: {
+    filter() {
       // Check if page data loaded
-      if(!this.$page){
+      if (!this.$page) {
         setTimeout(this.filter(), 1000);
         return;
       }
 
       // Filter
-      if(this.tool && this.status){
+      if (this.tool && this.status) {
         this.myPortfolio = this.$page.portfolio.edges.filter(portfolio => {
-          return portfolio.node.tools.find( tool => tool.id == this.tool) && portfolio.node.status.id == this.status
-        })
-
-      }else if(this.tool){
+          return (
+            portfolio.node.tools.find(tool => tool.id == this.tool) &&
+            portfolio.node.status.id == this.status
+          );
+        });
+      } else if (this.tool) {
         this.myPortfolio = this.$page.portfolio.edges.filter(portfolio => {
-          return portfolio.node.tools.find( tool => tool.id == this.tool)
-        })
-
-      }else if(this.status){
+          return portfolio.node.tools.find(tool => tool.id == this.tool);
+        });
+      } else if (this.status) {
         this.myPortfolio = this.$page.portfolio.edges.filter(portfolio => {
-          return portfolio.node.status.id == this.status
-        })
-      }else{
-        this.myPortfolio = this.$page.portfolio.edges
+          return portfolio.node.status.id == this.status;
+        });
+      } else {
+        this.myPortfolio = this.$page.portfolio.edges;
       }
     }
   }

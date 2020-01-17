@@ -1,20 +1,8 @@
 <template>
   <Layout>
-    <div class="title-bar columns is-vcentered is-gapless has-padding-top-20">
-      <div class="column is-2 has-text-centered">
-        <g-image src="~/assets/images/contact.png" width="150px" class="is-round-image" />
-      </div>
-      <div class="column has-margin-left-20">
-        <div class="description has-padding-10 has-padding-left-30 has-padding-bottom-30">
-          <h1
-            class="has-text-weight-bold is-uppercase is-size-6 is-pulled-left has-margin-0"
-          >Contact Me</h1>
-          <p
-            class="is-size-7 is-pulled-right is-italic"
-          >You're awesome, I'm delightful. What's on your mind?</p>
-        </div>
-      </div>
-    </div>
+    <Hero title="Contact Me" subtitle="You're awesome, I'm delightful. What's on your mind?">
+      <g-image src="~/assets/images/contact.png" width="150px" class="is-round-image" />
+    </Hero>
 
     <section class="container has-margin-top-20">
       <form action method="POST">
@@ -39,28 +27,29 @@
             type="textarea"
             required
             v-model="message"
-            minlength="10"
             maxlength="100"
             placeholder="Tell me more..."
           ></b-input>
         </b-field>
-        <b-button @click="submit">Send Message</b-button>
+        <div>
+          <b-button class="is-success is-rounded is-pulled-right" @click="submit">Send Message</b-button>
+        </div>
       </form>
+      <br />
     </section>
   </Layout>
 </template>
 
-<style>
-.title-bar .description {
-  background: #091a28;
-  border-radius: 100px 0 0 100px;
-}
-</style>
-
 <script>
+// Components
+import Hero from "~/components/Hero";
+
 export default {
   metaInfo: {
     title: "Contact Me"
+  },
+  components: {
+    Hero
   },
   data() {
     return {
@@ -80,11 +69,23 @@ export default {
           message: this.message
         })
 
-        .then(function(response) {
-          console.log(response);
+        .then(response => {
+          this.$buefy.toast.open({
+            message: "I have received your message. Thank you!",
+            type: "is-success"
+          });
+          this.name = "";
+          this.email = "";
+          this.subject = "";
+          this.message = "";
         })
 
-        .catch(function(error) {
+        .catch(error => {
+          this.$buefy.toast.open({
+            message:
+              "There was a problem sending your message. Please try again.",
+            type: "is-success"
+          });
           console.log(error);
         });
     }

@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Experience configuration, content and functionality
 - Education configuration, content and functionality
 - Contact form complete
+- Sitewide style improvements
 
 ## [0.0.0] - 2019-01-14
 
