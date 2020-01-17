@@ -3,6 +3,7 @@
     <div class="card-image">
       <figure class="image is-3by2">
         <g-image
+          v-if="portfolio.image"
           :src="portfolio.image"
           :alt="`${portfolio.title}'s hero image`"
           width="350px"

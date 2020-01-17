@@ -1,6 +1,7 @@
 <template>
   <timeline-item>
     <g-image
+      v-if="experience.image"
       :src="experience.image"
       :alt="experience.title"
       width="350px"
