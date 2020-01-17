@@ -1,30 +1,50 @@
 <template>
   <Layout>
-    <div class="title-bar columns is-vcentered is-gapless has-padding-top-20">
-      <div class="column is-2 has-text-centered">
-        <g-image src="~/assets/images/experience.png" width="150px" class="is-round-image" />
-      </div>
-      <div class="column has-margin-left-20">
-        <div class="description has-padding-10 has-padding-left-30 has-padding-bottom-30">
-          <h1
-            class="has-text-weight-bold is-uppercase is-size-6 is-pulled-left has-margin-0"
-          >My Experience</h1>
-          <p
-            class="is-size-7 is-pulled-right is-italic"
-          >My life so far? Still running, started small, going big!</p>
-        </div>
+    <Hero
+      title="My Recommendations"
+      subtitle="Stuck on my tastebuds. Comment with like or hate-speech. It's a free country :-D"
+    >
+      <g-image src="~/assets/images/recommendations.png" width="150px" class="is-round-image" />
+    </Hero>
+    <div class="columns is-multiline" v-if="$page.recommendations.edges.length">
+      <div
+        class="column is-3"
+        v-for="recommendation in $page.recommendations.edges"
+        :key="recommendation.node.id"
+      >
+        <Recommendation :recommendation="recommendation.node" />
       </div>
     </div>
-
   </Layout>
 </template>
 
-<style>
-.title-bar .description {
-  background: #091a28;
-  border-radius: 100px 0 0 100px;
+<script>
+// Components
+import Hero from "~/components/Hero";
+import Recommendation from "~/components/Recommendation";
+
+export default {
+  name: "RecommendationsPage",
+  components: {
+    Hero,
+    Recommendation
+  }
+};
+</script>
+
+<page-query>
+query{
+  recommendations: allRecommendation{
+  	edges{
+      node{
+        id
+        title
+        type
+        thumbnail(width: 325, height: 500, quality: 90)
+        excerpt
+        path
+      }
+    }
+  }
 }
-.experience {
-  background: #001934;
-}
-</style>
+</page-query>

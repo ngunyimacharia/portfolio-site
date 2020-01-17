@@ -9,6 +9,8 @@ import "bulma-helpers/css/bulma-helpers.min.css";
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+import VueDisqus from 'vue-disqus'
+
 // Local files
 import DefaultLayout from "~/layouts/Default.vue";
 import "~/assets/scss/custom.scss";
@@ -26,6 +28,8 @@ export default function(Vue, { router, head, isClient }) {
     });
 
     Vue.use(VueAxios, axios);
+
+    Vue.use(VueDisqus);
 
     // Set default layout as a global component
     Vue.component("Layout", DefaultLayout);

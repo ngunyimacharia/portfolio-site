@@ -61,6 +61,14 @@ module.exports = {
                 path: "./**/*.md"
             }
         },
+        {
+            use: "@gridsome/source-filesystem",
+            options: {
+                typeName: "Recommendation",
+                baseDir: "./recommendations",
+                path: "./**/*.md"
+            }
+        },
 
         // Netflify CMS
         {
@@ -71,6 +79,6 @@ module.exports = {
         }
     ],
     templates: {
-        Platform: "/platform/:title"
+        Recommendation: "/recommendation/:path"
     }
 };
