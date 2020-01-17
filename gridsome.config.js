@@ -19,14 +19,23 @@ module.exports = {
     },
     plugins: [
         // Markdown
+
         {
-            use: "@gridsome/source-filesystem",
+            use: "gridsome-source-google-sheets",
             options: {
-                typeName: "Platform",
-                baseDir: "./content/platforms",
-                path: "*.md"
+                sheetId: process.env.GRIDSOME_GOOGLE_SHEET,
+                apiKey: process.env.GRIDSOME_GOOGLE_API_KEY,
+                type: "Platform"
             }
         },
+        // {
+        //     use: "@gridsome/source-filesystem",
+        //     options: {
+        //         typeName: "Platform",
+        //         baseDir: "./content/platforms",
+        //         path: "*.md"
+        //     }
+        // },
         {
             use: "@gridsome/source-filesystem",
             options: {
@@ -65,7 +74,7 @@ module.exports = {
             use: "@gridsome/source-filesystem",
             options: {
                 typeName: "Recommendation",
-                baseDir: "./recommendations",
+                baseDir: "./content/recommendations",
                 path: "./**/*.md"
             }
         },

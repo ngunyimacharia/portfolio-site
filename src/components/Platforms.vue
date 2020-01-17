@@ -37,8 +37,6 @@ export default {
                 icon_pack 
                 icon
                 target
-                path 
-                content
                 color
             }
             }

@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sitewide style improvements
 - Netlify CMS integrated
 - Recommendations complete
+- Google sheets connection complete
 
 ## [0.0.0] - 2019-01-14
 

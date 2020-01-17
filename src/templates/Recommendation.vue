@@ -11,10 +11,7 @@
           </div>
         </div>
         <div class="column">
-          <vue-disqus
-            shortname="personal-website-xkdalvbsot"
-            :identifier="$page.recommendation.id"
-          ></vue-disqus>
+          <vue-disqus :shortname="discuss_shortname" :identifier="$page.recommendation.id"></vue-disqus>
         </div>
       </div>
     </div>
@@ -28,6 +25,11 @@ import Hero from "~/components/Hero";
 export default {
   components: {
     Hero
+  },
+  data() {
+    return {
+      discuss_shortname: process.env.GRIDSOME_DISCUSS_SHORTNAME
+    };
   }
 };
 </script>
