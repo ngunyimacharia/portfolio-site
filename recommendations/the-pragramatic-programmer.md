@@ -1,6 +1,6 @@
 ---
 title: The Pragramatic Programmer
-type: TV Show
+type: Books
 excerpt: >-
   To participate in the next generation of professional product delivery you
   have to be pragmatic but disciplined. Otherwise, you are fated to be
