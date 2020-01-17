@@ -85,6 +85,19 @@ module.exports = {
             options: {
                 publicPath: `/admin`
             }
+        },
+
+        // Custom GraphQl / Hasura
+
+        {
+            use: "gridsome-source-graphql",
+            options: {
+                url: "https://ngunyimacharia-website.herokuapp.com/v1/graphql",
+                fieldName: "hasura",
+                headers: {
+                    //   Authorization: `Bearer ${process.env.AUTH_TOKEN}`
+                }
+            }
         }
     ],
     templates: {

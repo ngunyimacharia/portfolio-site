@@ -14,6 +14,16 @@
           <b-input required v-model="email" placeholder="Everyone has one of these nowadays"></b-input>
         </b-field>
 
+        <b-field label="Country" labelPosition="inside" expanded>
+          <b-select required placeholder="Select country" expanded size="is-small" v-model="country">
+            <option
+              v-for="country in $page.countries"
+              :key="country.code"
+              :value="country.code"
+            >{{country.name}}</option>
+          </b-select>
+        </b-field>
+
         <b-field label="Subject" labelPosition="inside">
           <b-input
             required
@@ -55,6 +65,7 @@ export default {
     return {
       name: "",
       email: "",
+      country: null,
       subject: "",
       message: ""
     };
@@ -65,6 +76,7 @@ export default {
         .post("https://getform.io/f/23ccbb3c-2f75-4941-a585-4b16df64c0b7", {
           name: this.name,
           email: this.email,
+          country: this.country,
           subject: this.subject,
           message: this.message
         })
@@ -76,6 +88,7 @@ export default {
           });
           this.name = "";
           this.email = "";
+          this.country = null;
           this.subject = "";
           this.message = "";
         })
@@ -92,3 +105,13 @@ export default {
   }
 };
 </script>
+
+
+<page-query>
+query{
+  countries: countries{
+    code
+    name
+  }
+}
+</page-query>

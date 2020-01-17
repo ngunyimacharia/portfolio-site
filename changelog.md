@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Netlify CMS integrated
 - Recommendations complete
 - Google sheets connection complete
+- Hasura source added and country to form
 
 ## [0.0.0] - 2019-01-14
 
