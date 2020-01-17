@@ -4,7 +4,7 @@
       title="Live together, laugh together"
       subtitle="The first computer dates back to Adam and Eve. It was an Apple with limited memory, just one byte. And then everything crashed."
     >
-      <g-image src="~/assets/images/jokes.png" width="150px" class="is-round-image" />
+      <img src="/images/jokes.png" width="150px" class="is-round-image" />
     </Hero>
     <div class="container">
       <div class="columns has-margin-top-20">

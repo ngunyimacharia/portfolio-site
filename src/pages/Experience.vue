@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Hero title="My Experience" subtitle="My life so far? Still running, started small, going big!">
-      <g-image src="~/assets/images/experience.png" width="150px" class="is-round-image" />
+      <img src="/images/experience.png" width="150px" class="is-round-image" />
     </Hero>
 
     <div class="container has-margin-top-30">
@@ -44,7 +44,7 @@ query{
         title
         company
         url
-        image(width: 50, height: 50, quality: 90)
+        image
         country
         dateStarted
         dateStopped

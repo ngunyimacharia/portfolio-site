@@ -1,7 +1,7 @@
 ---
 title: 'Qetela'
 url: https://qetela.tk/
-image: "./qetela.png"
+image: "/images/portfolio/qetela.png"
 status: offline
 tools: ["web","bulma","vue", "nuxt","django","python","graphql"]
 dateCreated: "2018-11-11"

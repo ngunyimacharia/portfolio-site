@@ -2,7 +2,7 @@
 title: Lead Software Developer
 company: PerTech Solutions
 url: https://pertech.co.ke
-image: "./pertech.png"
+image: "/images/experience/pertech.png"
 country: Nairobi, Kenya
 dateStarted: "2014-08-01"
 dateStopped: "2018-02-01"

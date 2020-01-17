@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Hero title="Contact Me" subtitle="You're awesome, I'm delightful. What's on your mind?">
-      <g-image src="~/assets/images/contact.png" width="150px" class="is-round-image" />
+      <img src="/images/contact.png" width="150px" class="is-round-image" />
     </Hero>
 
     <section class="container has-margin-top-20">

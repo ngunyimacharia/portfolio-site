@@ -2,7 +2,7 @@
 title: Software Engineer
 company: Farwell Consultants Limited
 url: https://farwell-consultants.com/
-image: "./farwell.jpeg"
+image: "/images/experience/farwell.jpeg"
 country: Nairobi, Kenya
 dateStarted: "2018-03-01"
 dateStopped: "2018-08-01"

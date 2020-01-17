@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-image">
       <figure class="image is-3by2">
-        <g-image
+        <img
           v-if="portfolio.image"
           :src="portfolio.image"
           :alt="`${portfolio.title}'s hero image`"

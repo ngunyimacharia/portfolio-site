@@ -1,7 +1,7 @@
 ---
 title: 'Healthguide Kenya'
 url: https://healthguide.co.ke/
-image: "./healthguide.png"
+image: "/images/portfolio/healthguide.png"
 status: offline
 tools: ["web","angular", "laravel"]
 dateCreated: "2016-06-24"

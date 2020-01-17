@@ -1,6 +1,6 @@
 ---
 title: "Baseline: Data, ML, AI"
 institution: Qwiklabs
-image: "./qwiklabs.png"
+image: "/images/education/qwiklabs.png"
 dateCompleted: "2019-04-01"
 ---

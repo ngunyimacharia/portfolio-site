@@ -1,7 +1,7 @@
 ---
 title: 'Lotus Consulting'
 url: https://lotusconsulting.co.ke/
-image: "./lotus.png"
+image: "/images/portfolio/lotus.png"
 status: online
 tools: ["web","wordpress", "php"]
 dateCreated: "2018-03-12"

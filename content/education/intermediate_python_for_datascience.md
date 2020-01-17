@@ -1,6 +1,6 @@
 ---
 title: "Intermediate Python for Data Science"
 institution: Datacamp
-image: "./datacamp.png"
+image: "/images/education/datacamp.png"
 dateCompleted: "2018-10-01"
 ---

@@ -1,6 +1,6 @@
 <template>
   <timeline-item>
-    <g-image
+    <img
       v-if="experience.image"
       :src="experience.image"
       :alt="experience.title"

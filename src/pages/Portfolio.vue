@@ -4,7 +4,7 @@
       title="My Portfolio"
       subtitle="Feel free to contact me if you want us to work together towards something awesome"
     >
-      <g-image src="~/assets/images/portfolio.png" width="150px" class="is-round-image" />
+      <img src="/images/portfolio.png" width="150px" class="is-round-image" />
     </Hero>
     <div class="portfolio-list" v-if="$page">
       <div class="container">
@@ -71,15 +71,9 @@ export default {
     status: function(status) {
       console.log(status);
       this.filter();
-    },
-    $page: function(pageVal) {
-      this.filter();
     }
   },
   created() {
-    this.filter();
-  },
-  mounted() {
     this.filter();
   },
   methods: {
@@ -123,7 +117,7 @@ query{
         id
         title
         url
-        image(width: 350, height: 235, quality: 90)
+        image
         status{
           id
         }

@@ -1,7 +1,7 @@
 ---
 title: 'Exotique Tours and Travels'
 url: https://exotiquetours.com/
-image: "./exotique.png"
+image: "/images/portfolio/exotique.png"
 status: online
 tools: ["web","wordpress", "php"]
 dateCreated: "2017-06-15"

@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column"></div>
         <div class="column is-three-fifths has-text-centered">
-          <g-image src="~/assets/images/ppic.png" width="200" class="is-round-image has-margin-20" />
+          <img src="/images/ppic.png" width="150px" class="is-round-image has-margin-20" />
           <h1 class="has-text-weight-bold is-uppercase is-size-5">{{$page.metadata.siteName}}</h1>
           <h3
             class="has-text-weight-semibold is-capitalized is-size-6 has-margin-20"

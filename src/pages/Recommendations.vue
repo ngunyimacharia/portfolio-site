@@ -4,7 +4,7 @@
       title="My Recommendations"
       subtitle="Stuck on my tastebuds. Comment with like or hate-speech. It's a free country :-D"
     >
-      <g-image src="~/assets/images/recommendations.png" width="150px" class="is-round-image" />
+      <img src="/images/recommendations.png" width="150px" class="is-round-image" />
     </Hero>
     <div class="columns is-multiline" v-if="$page.recommendations.edges.length">
       <div
@@ -43,7 +43,7 @@ query{
         id
         title
         type
-        thumbnail(width: 325, height: 500, quality: 90)
+        thumbnail
         excerpt
         path
       }
