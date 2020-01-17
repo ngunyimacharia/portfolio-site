@@ -12,7 +12,9 @@
           <p
             class="has-text-weight-light is-capitalized is-size-6 has-margin-20"
           >Design, development, integration and maintenance of web-based systems using the latest available technologies.</p>
-          <Platforms />
+          <div class="container">
+            <Platforms />
+          </div>
         </div>
         <div class="column"></div>
       </div>
