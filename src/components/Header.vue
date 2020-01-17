@@ -26,6 +26,12 @@
         <b-navbar-item>
           <g-link to="/contact/" class="link is-size-7">Contact Me</g-link>
         </b-navbar-item>
+        <b-navbar-item>
+          <g-link to="/recommendations/" class="link is-size-7">Recommendations</g-link>
+        </b-navbar-item>
+        <b-navbar-item>
+          <g-link to="/jokes/" class="link is-size-7">Jokes</g-link>
+        </b-navbar-item>
       </template>
     </b-navbar>
   </header>

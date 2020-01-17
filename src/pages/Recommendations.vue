@@ -25,6 +25,9 @@ import Recommendation from "~/components/Recommendation";
 
 export default {
   name: "RecommendationsPage",
+  metaInfo: {
+    title: "My Recommendations"
+  },
   components: {
     Hero,
     Recommendation

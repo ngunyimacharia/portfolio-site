@@ -26,6 +26,9 @@ export default {
   components: {
     Hero
   },
+  metaInfo: {
+    title: "My Recommendation"
+  },
   data() {
     return {
       discuss_shortname: process.env.GRIDSOME_DISCUSS_SHORTNAME

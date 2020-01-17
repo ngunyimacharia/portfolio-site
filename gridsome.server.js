@@ -5,12 +5,26 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+module.exports = function(api) {
+    const axios = require("axios");
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+    api.loadSource(async actions => {
+        const { data } = await axios.get("https://icanhazdadjoke.com/search?limit=50", {
+            headers: { Accept: "application/json" }
+        });
+
+        const collection = actions.addCollection("Joke");
+
+        for (const item of data.results) {
+            collection.addNode({
+                id: item.id,
+                joke: item.joke
+            });
+        }
+
+    });
+
+    api.createPages(({ createPage }) => {
+        // Use the Pages API here: https://gridsome.org/docs/pages-api/
+    });
+};
