@@ -25,7 +25,7 @@
             <g-link to="/education/" class="link is-size-7">Education</g-link>
           </b-navbar-item>
           <b-navbar-item>
-            <g-link href="#" class="link is-size-7">Contact Me</g-link>
+            <g-link to="/contact/" class="link is-size-7">Contact Me</g-link>
           </b-navbar-item>
         </template>
       </b-navbar>

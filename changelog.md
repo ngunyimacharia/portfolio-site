@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Portfolio configuration, content and functionality
 - Experience configuration, content and functionality
 - Education configuration, content and functionality
-- 
+- Contact form complete
+
 ## [0.0.0] - 2019-01-14
 
 ### Added
