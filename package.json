@@ -4,7 +4,9 @@
     "scripts": {
         "build": "gridsome build",
         "develop": "gridsome develop",
-        "explore": "gridsome explore"
+        "explore": "gridsome explore",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -b master -d dist"
     },
     "dependencies": {
         "@gridsome/source-filesystem": "^0.6.2",
@@ -12,6 +14,7 @@
         "axios": "^0.19.1",
         "buefy": "^0.8.9",
         "bulma-helpers": "^0.3.8",
+        "gh-pages": "^2.2.0",
         "gridsome": "^0.7.0",
         "gridsome-plugin-netlify-cms": "^1.0.9",
         "gridsome-source-google-sheets": "^0.3.1",

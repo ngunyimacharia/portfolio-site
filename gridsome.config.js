@@ -7,6 +7,8 @@
 module.exports = {
     siteName: "Kelvin M Ngunyi",
     siteDescription: "Full-time Software Engineer and aspiring tech rockstar!",
+    siteUrl: 'https://ngunyimacharia.github.io',
+    // pathPrefix: '/ngunyimacharia'
     transformers: {
         remark: {
             externalLinksTarget: "_blank",
