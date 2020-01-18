@@ -117,7 +117,7 @@ query{
         id
         title
         url
-        image
+        image(width: 350, height: 235, quality: 90)
         status{
           id
         }

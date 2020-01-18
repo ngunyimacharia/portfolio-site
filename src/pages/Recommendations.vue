@@ -43,7 +43,7 @@ query{
         id
         title
         type
-        thumbnail
+        thumbnail(width: 325, height: 500, quality: 90)
         excerpt
         path
       }

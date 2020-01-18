@@ -1,7 +1,7 @@
 ---
 title: 'Hack Africa'
 url: https://hack.africa/
-image: "/images/portfolio/afrihack.jpg"
+image: "./afrihack.jpg"
 status: offline
 tools: ["wordpress","php"]
 dateCreated: "2018-12-12"

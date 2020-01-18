@@ -1,6 +1,6 @@
 ---
 title: "Graphic Design"
 institution: Zetech University
-image: "/images/education/zetech.jpeg"
+image: "./zetech.jpeg"
 dateCompleted: "2014-08-01"
 ---

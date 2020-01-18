@@ -2,7 +2,7 @@
 title: Co-Founder | Technology Lead
 company: Kweza Technologies
 url: https://kweza.co.za/
-image: "/images/experience/kweza.png"
+image: "./kweza.png"
 country: Johannesburg, South Africa
 dateStarted: "2019-08-01"
 dateStopped: 

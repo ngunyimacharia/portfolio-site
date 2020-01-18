@@ -2,7 +2,7 @@
 title: President of Connect and Recruit
 company: Lapid Leaders Africa
 url: http://lapidleadersafrica.com/
-image: "/images/experience/lapid.png"
+image: "./lapid.png"
 country: Nairobi, Kenya
 dateStarted: "2017-01-01"
 dateStopped: "2017-06-01"

@@ -1,7 +1,7 @@
 ---
 title: 'Kweza Technologies'
 url: https://kweza.co.za/
-image: "/images/portfolio/kweza.png"
+image: "./kweza.png"
 status: online
 tools: ["web","mobile","bootstrap","vue", "nuxt","vuetify","nativescript","php","laravel"]
 dateCreated: "2019-07-01"

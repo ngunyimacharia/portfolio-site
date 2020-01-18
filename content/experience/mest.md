@@ -2,7 +2,7 @@
 title: Entrepreneur in Training
 company: MEST Africa
 url: https://meltwater.org/
-image: "/images/experience/mest.png"
+image: "./mest.png"
 country: Accra, Ghana
 dateStarted: "2018-08-01"
 dateStopped: "2019-08-01"

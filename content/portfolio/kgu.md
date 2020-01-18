@@ -1,7 +1,7 @@
 ---
 title: 'Kenya Golf Union'
 url: https://kenyagolfunion.org/
-image: "/images/portfolio/kgu.png"
+image: "./kgu.png"
 status: replaced
 tools: ["web","wordpress","php"]
 dateCreated: "2018-01-10"

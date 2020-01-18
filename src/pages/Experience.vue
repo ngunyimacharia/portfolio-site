@@ -44,7 +44,7 @@ query{
         title
         company
         url
-        image
+        image(width: 50, height: 50, quality: 90)
         country
         dateStarted
         dateStopped

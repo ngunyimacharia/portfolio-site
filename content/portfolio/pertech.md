@@ -1,7 +1,7 @@
 ---
 title: 'PerTech Solutions Kenya'
 url: https://pertech.co.ke/
-image: "/images/portfolio/pertech.png"
+image: "./pertech.png"
 status: online
 tools: ["web","wordpress", "php"]
 dateCreated: "2014-10-12"

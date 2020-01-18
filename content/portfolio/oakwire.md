@@ -1,7 +1,7 @@
 ---
 title: 'Oakwire Ltd'
 url: https://oakwireltd.com/
-image: "/images/portfolio/oakwire.png"
+image: "./oakwire.png"
 status: online
 tools: ["web","wordpress", "php"]
 dateCreated: "2013-09-13"

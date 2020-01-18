@@ -1,7 +1,7 @@
 ---
 title: 'Silhoette Design'
 url: https://silhouette.co.ke/
-image: "/images/portfolio/silhouette.png"
+image: "./silhouette.png"
 status: online
 tools: ["web","wordpress", "php"]
 dateCreated: "2018-02-02"

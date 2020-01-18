@@ -2,7 +2,7 @@
 title: Lead Software Developer
 company: HealthGuide Kenya
 url: https://healthguide.co.ke/
-image: "/images/experience/healthguide.png"
+image: "./healthguide.png"
 country: Nairobi, Kenya
 dateStarted: "2016-01-01"
 dateStopped: "2017-01-01"
