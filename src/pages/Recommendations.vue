@@ -4,7 +4,7 @@
       title="My Recommendations"
       subtitle="Stuck on my tastebuds. Comment with like or hate-speech. It's a free country :-D"
     >
-      <img src="~/assets/images/recommendations.png" width="150px" class="is-round-image" />
+      <g-image src="~/assets/images/recommendations.png" width="150px" class="is-round-image" />
     </Hero>
     <div class="columns is-multiline" v-if="$page.recommendations.edges.length">
       <div
