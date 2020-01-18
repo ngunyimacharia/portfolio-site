@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Hero title="My Experience" subtitle="My life so far? Still running, started small, going big!">
-      <img src="/images/experience.png" width="150px" class="is-round-image" />
+      <g-image src="~/assets/images/experience.png" width="150px" class="is-round-image" />
     </Hero>
 
     <div class="container has-margin-top-30">

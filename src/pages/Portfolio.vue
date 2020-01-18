@@ -4,7 +4,7 @@
       title="My Portfolio"
       subtitle="Feel free to contact me if you want us to work together towards something awesome"
     >
-      <img src="/images/portfolio.png" width="150px" class="is-round-image" />
+      <g-image src="~/assets/images/portfolio.png" width="150px" class="is-round-image" />
     </Hero>
     <div class="portfolio-list" v-if="$page">
       <div class="container">

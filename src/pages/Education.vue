@@ -2,7 +2,7 @@
   <Layout>
 
     <Hero title="My Education" subtitle="They say you start dying when you stop learning. How am I doing?">
-      <img src="/images/education.png" width="150px" class="is-round-image" />
+      <g-image src="~/assets/images/education.png" width="150px" class="is-round-image" />
     </Hero>
 
     <div class="education has-padding-top-30">
