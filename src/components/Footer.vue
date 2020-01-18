@@ -8,7 +8,7 @@
         on
         &nbsp;
         <a
-          href="https://github.com/ngunyimacharia/ngunyimacharia/"
+          href="https://github.com/ngunyimacharia/ngunyimacharia.github.io/tree/dev"
           target="_blank"
         >
           <b-icon pack="fab" icon="github" size="is-small" />
