@@ -6,13 +6,13 @@
           <span class="logo">K | N</span>
         </b-navbar-item>
       </template>
-      <template slot="start">
-        <!-- Nothing here  -->
-      </template>
-
+      
       <template slot="end">
         <b-navbar-item>
           <g-link to="/" class="link is-size-7">Home</g-link>
+        </b-navbar-item>
+        <b-navbar-item>
+          <!-- <g-link to="/portfolio/" class="link is-size-7">Portfolio</g-link> -->
         </b-navbar-item>
         <b-navbar-item>
           <g-link to="/portfolio/" class="link is-size-7">Portfolio</g-link>
