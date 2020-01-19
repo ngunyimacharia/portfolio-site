@@ -20,7 +20,7 @@
           <a
             :href="experience.url"
             target="_blank"
-            class="has-text-link is-size-6"
+            class="has-text-link"
           >{{experience.company}}</a>
         </p>
       </header>

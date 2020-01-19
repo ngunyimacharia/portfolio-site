@@ -14,19 +14,14 @@
     </div>-->
     <div class="card">
       <header class="card-header">
-        <p class="card-header-title has-text-weight-bolder">{{education.title}}</p>
+        <p
+          class="card-header-title has-text-weight-bolder"
+        >{{education.title}} - {{ education.institution }}</p>
       </header>
       <div class="card-content">
-        <div class="content is-small">
+        <div class="content is-size-7">
           <p>
-            Institution:
-            <span class="has-text-weight-bold">{{ education.institution }}</span>
-          </p>
-          <p>
-            Date Completed:
-            <span
-              class="has-text-weight-bold has-text-info"
-            >{{ education.dateCompleted }}</span>
+            <span class="has-text-weight-bold has-text-info">{{ education.dateCompleted }}</span>
           </p>
         </div>
       </div>
