@@ -1,17 +1,22 @@
 <template>
-  <div class="columns connect-links">
-    <div class="column has-text-centered" v-for="platform in $static.allPlatform.edges" :key="platform.node.title">
+  <div class="columns is-mobile connect-links">
+    <span
+      class="column"
+      v-for="platform in $static.allPlatform.edges"
+      :key="platform.node.title"
+    >
       <a :href="platform.node.target" target="_blank">
-        <b-icon
-          :pack="platform.node.icon_pack"
-          :icon="platform.node.icon"
-          size="is-medium"
-          :style="{ color: platform.node.color}"
-        ></b-icon>
+        <b-icon :pack="platform.node.icon_pack" :icon="platform.node.icon" class="is-size-6 icon"></b-icon>
       </a>
-    </div>
+    </span>
   </div>
 </template>
+
+<style scoped>
+.icon {
+  color: #00a672;
+}
+</style>
 
 <script>
 export default {
