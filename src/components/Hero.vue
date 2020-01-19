@@ -6,8 +6,8 @@
           <slot />
         </div>
         <div class="column">
-          <h1 class="title is-size-5">{{title}}</h1>
-          <h2 class="subtitle is-size-7 has-margin-top-10">{{subtitle}}</h2>
+          <h1 class="title is-size-5 has-text-centered-mobile">{{title}}</h1>
+          <h2 class="subtitle is-size-7 has-margin-top-10 has-text-centered-mobile">{{subtitle}}</h2>
         </div>
       </div>
     </div>

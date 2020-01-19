@@ -45,6 +45,7 @@ query{
         id
         title
         institution
+        url
         image(width: 50, height: 50, quality: 90)
         dateCompleted
       }

@@ -14,15 +14,15 @@
     </div>-->
     <div class="card">
       <header class="card-header">
-        <p class="card-header-title has-text-weight-bolder">
-          {{experience.title}}
-          -&nbsp;
+        <div class="card-header-title has-text-weight-bolder is-block-mobile">
+          <p class="is-block-mobile has-text-centered-mobile">{{experience.title}}</p>
+          <p class="is-hidden-mobile">&nbsp;-&nbsp;</p>
           <a
             :href="experience.url"
             target="_blank"
-            class="has-text-link"
+            class="has-text-link is-block-mobile has-text-centered-mobile"
           >{{experience.company}}</a>
-        </p>
+        </div>
       </header>
       <div class="card-content">
         <div class="content is-small">
