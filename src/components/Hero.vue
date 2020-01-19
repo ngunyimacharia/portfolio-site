@@ -18,6 +18,9 @@
 .hero {
   background-color: #0e2233;
 }
+.hero-body {
+  background: url("/images/dot.png");
+}
 </style>
 
 <script>
