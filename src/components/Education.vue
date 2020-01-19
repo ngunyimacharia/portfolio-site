@@ -14,9 +14,14 @@
     </div>-->
     <div class="card">
       <header class="card-header">
-        <p
-          class="card-header-title has-text-weight-bolder"
-        >{{education.title}} - {{ education.institution }}</p>
+        <p class="card-header-title has-text-weight-bolder">
+          {{education.title}} &nbsp;-&nbsp;
+          <a
+            :href="education.institution"
+            target="_blank"
+            class="has-text-link"
+          >{{ education.institution }}</a>
+        </p>
       </header>
       <div class="card-content">
         <div class="content is-size-7">
