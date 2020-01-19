@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-    siteName: "Kelvin M Ngunyi",
+    siteName: "Kelvin M Ngunyi - Software Engineer",
     siteDescription: "Full-time Software Engineer and aspiring tech rockstar!",
     siteUrl: 'https://ngunyimacharia.github.io',
     // pathPrefix: '/ngunyimacharia'
