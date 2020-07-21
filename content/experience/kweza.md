@@ -1,5 +1,5 @@
 ---
-title: Co-Founder | Technology Lead
+title: Technology Lead
 company: Kweza Technologies
 url: https://kweza.co.za/
 image: "./kweza.png"
