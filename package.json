@@ -11,7 +11,7 @@
     "dependencies": {
         "@gridsome/source-filesystem": "^0.6.2",
         "@gridsome/transformer-remark": "^0.4.0",
-        "axios": "^0.19.1",
+        "axios": "^0.21.1",
         "buefy": "^0.8.9",
         "bulma-helpers": "^0.3.8",
         "gh-pages": "^2.2.0",
