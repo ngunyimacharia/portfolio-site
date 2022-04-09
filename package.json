@@ -19,7 +19,7 @@
         "gridsome-plugin-netlify-cms": "^1.0.9",
         "gridsome-source-google-sheets": "^0.3.1",
         "gridsome-source-graphql": "^1.0.2",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "netlify-cms": "^2.10.8",
         "vue-axios": "^2.1.5",
         "vue-cute-timeline": "^1.2.8",
